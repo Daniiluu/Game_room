@@ -1,0 +1,6 @@
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (nombre, sexo, email, videojuego)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT sexo (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT videojuego (#PCDATA)>

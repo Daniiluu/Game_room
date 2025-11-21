@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="usuarios.xsl"?>
+
+<usuarios>
+    <usuario>
+        <nombre>Daniel</nombre>
+        <sexo>Hombre</sexo>
+        <email>daniel.luis.rubio@gmail.com</email>
+        <videojuego>Hay Day</videojuego>
+    </usuario>
+    <usuario>
+        <nombre>Stefan</nombre>
+        <sexo>Hombre</sexo>
+        <email>Stefan@gmail.com</email>
+        <videojuego>Spiderman 2</videojuego>
+    </usuario>
+    <usuario>
+        <nombre>Hugo</nombre>
+        <sexo>Hombre</sexo>
+        <email>hugo@gmail.com</email>
+        <videojuego>Spiderman 2</videojuego>
+    </usuario>
+    <usuario>
+        <nombre>Sara</nombre>
+        <sexo>Mujer</sexo>
+        <email>sara@gmail.com</email>
+        <videojuego>Balatro</videojuego>
+    </usuario>
+    <usuario>
+        <nombre>Ashley</nombre>
+        <sexo>Mujer</sexo>
+        <email>Ashley@gmail.com</email>
+        <videojuego>Minecraft</videojuego>
+    </usuario>
+</usuarios>

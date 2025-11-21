@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Videojuegos</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+    <button class="back-button" onclick="window.location.href='index.html'"><p>⬅</p></button>
+
+    <div class="form-container">
+        <h2>Introduce un nuevo videojuego</h2>
+        <form id="gameForm">
+            <div class="form-group">
+                <label for="nombre">Tu Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="sexo">Sexo:</label>
+                <input type="text" id="sexo" name="sexo" placeholder="Hombre, Mujer, Otro..." required>
+            </div>
+            <div class="form-group">
+                <label for="email">Tu Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="videojuego">Nombre del Videojuego:</label>
+                <input type="text" id="videojuego" name="videojuego" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Guardar Datos</button>
+            </div>
+        </form>
+        <button id="exportXML">Exportar XML</button>
+  <script src="script.js"></script>
+    </div>
+
+    <script>
+        document.getElementById("gameForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Obtener datos del formulario
+            let nombre = document.getElementById("nombre").value;
+            let sexo = document.getElementById("sexo").value;
+            let email = document.getElementById("email").value;
+            let videojuego = document.getElementById("videojuego").value;
+
+            // Crear objeto usuario
+            let usuario = { nombre, sexo, email, videojuego };
+
+            // Obtener datos existentes en localStorage
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+            // Agregar nuevo usuario
+            usuarios.push(usuario);
+
+            // Guardar en localStorage
+            localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+            // Limpiar formulario
+            document.getElementById("gameForm").reset();
+            alert("Datos guardados correctamente.");
+        });
+
+        // Exportar datos a XML
+        document.getElementById("exportXML").addEventListener("click", function() {
+            let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+            let xmlContent = `<?xml version="1.0" encoding="UTF-8"?>\n<usuarios>\n`;
+
+            usuarios.forEach(user => {
+                xmlContent += `    <usuario>\n`;
+                xmlContent += `        <nombre>${user.nombre}</nombre>\n`;
+                xmlContent += `        <sexo>${user.sexo}</sexo>\n`;
+                xmlContent += `        <email>${user.email}</email>\n`;
+                xmlContent += `        <videojuego>${user.videojuego}</videojuego>\n`;
+                xmlContent += `    </usuario>\n`;
+            });
+
+            xmlContent += `</usuarios>`;
+
+            // Crear y descargar el archivo XML
+            let blob = new Blob([xmlContent], { type: "application/xml" });
+            let a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = "usuarios.xml";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
+
+</body>
+</html>
