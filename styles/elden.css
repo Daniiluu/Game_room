@@ -4,7 +4,7 @@
     font-family: poppins;
 }
 body{
-    background-image: url("elden.jpg");
+    background-image: url("../imagenes/elden.jpg");
     background-size: cover;
     background-repeat: no-repeat
 }

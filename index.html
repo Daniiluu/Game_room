@@ -9,17 +9,17 @@
 <body>
     <div class="container">
         <div class="left-box">
-            
-            
-                <h2>Proximas incorporaciones:</h2> <br>
-                
-                    <li><a href="#"><span>Minecraft</span></a></li>
-                    <li><a href="#"><span>Stradrew valley</span></a></li>
-                    <li><a href="#"><span>Elden ring</span></a></li>
-                    <li><a href="#"><span>Persona 5</span></a></li>
-                    <p>Si quieres solicitar juegos nuevos, realiza el <i><a href="formulario.html">formulario</a></i></p>
-                
-            
+
+
+            <h2>Proximas incorporaciones:</h2> <br>
+
+            <li><a href="#"><span>Minecraft</span></a></li>
+            <li><a href="#"><span>Stradrew valley</span></a></li>
+            <li><a href="#"><span>Elden ring</span></a></li>
+            <li><a href="#"><span>Persona 5</span></a></li>
+            <p>Si quieres solicitar juegos nuevos, realiza el <i><a href="formulario.html">formulario</a></i></p>
+
+
             <h2>Lista de más escuchados</h2>
             <ul>
                 <li><a href="TLOU2.html"><span>The last of us II</span></a></li>
@@ -37,40 +37,50 @@
         </a>
         <div class="right-bottom-box">
             <div class="card-container">
-                <a href="RDR2.html"><div class="card1"></div></a>
-                <a href="Horizon.html"><div class="card2"></div></a>
-                <a href="zelda_BOTW.html"><div class="card3"></div></a>
-                <a href="Ghost.html"><div class="card4"></div></a>
-                <a href="Elden.html"><div class="card7"></div></a>
-                <a href="GOW_2018.html"><div class="card6"></div></a>
+                <a href="RDR2.html">
+                    <div class="card1"></div>
+                </a>
+                <a href="Horizon.html">
+                    <div class="card2"></div>
+                </a>
+                <a href="zelda_BOTW.html">
+                    <div class="card3"></div>
+                </a>
+                <a href="Ghost.html">
+                    <div class="card4"></div>
+                </a>
+                <a href="Elden.html">
+                    <div class="card7"></div>
+                </a>
+                <a href="GOW_2018.html">
+                    <div class="card6"></div>
+                </a>
             </div>
         </div>
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-    const rightTopBox = document.querySelector(".right-top-box");
+            const rightTopBox = document.querySelector(".right-top-box");
 
-    // Evento para aplicar la rotación 3D
-    rightTopBox.addEventListener("mousemove", (e) => {
-        const rect = rightTopBox.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left; // Posición X relativa
-        const mouseY = e.clientY - rect.top; // Posición Y relativa
+            // Evento para aplicar la rotación 3D
+            rightTopBox.addEventListener("mousemove", (e) => {
+                const rect = rightTopBox.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left; // Posición X relativa
+                const mouseY = e.clientY - rect.top; // Posición Y relativa
 
-        // Calcular la rotación en cada eje (valores más pequeños para un movimiento sutil)
-        const rotateY = ((mouseX / rect.width) - 0.5) * 10; // Rango reducido: -5° a 5°
-        const rotateX = ((mouseY / rect.height) - 0.5) * -10; // Rango reducido: -5° a 5°
+                // Calcular la rotación en cada eje (valores más pequeños para un movimiento sutil)
+                const rotateY = ((mouseX / rect.width) - 0.5) * 10; // Rango reducido: -5° a 5°
+                const rotateX = ((mouseY / rect.height) - 0.5) * -10; // Rango reducido: -5° a 5°
 
-        // Aplicar transformación 3D
-        rightTopBox.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
+                // Aplicar transformación 3D
+                rightTopBox.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
 
-    // Restablecer la rotación al salir del recuadro
-    rightTopBox.addEventListener("mouseleave", () => {
-        rightTopBox.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg)";
-    });
-});
-
-
+            // Restablecer la rotación al salir del recuadro
+            rightTopBox.addEventListener("mouseleave", () => {
+                rightTopBox.style.transform = "perspective(800px) rotateX(0deg) rotateY(0deg)";
+            });
+        });
     </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     font-family: poppins;
 }
 body{
-    background-image: url("horizon_FW.jpg");
+    background-image: url("../imagenes/horizon_FW.jpg");
     background-size: cover;
     background-repeat: no-repeat
 }
