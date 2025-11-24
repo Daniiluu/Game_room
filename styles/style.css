@@ -106,7 +106,7 @@ line-height: 21px;
 }
 
 .right-top-box {
-  background-image: url('TLOF2_op2.webp');
+  background-image: url('../imagenes/TLOF2_op2.webp');
   background-size: cover;
   background-position-x: -10px;
   background-position-y: -10px;
@@ -172,7 +172,7 @@ a:-webkit-any-link{
 .card1{
   min-width: 150px;
   height: 70%;
-  background-image: url('RDR2.webp');
+  background-image: url('../imagenes/RDR2.webp');
   background-size: cover;
   background-position-x: 50%;
   color: #333;
@@ -187,7 +187,7 @@ a:-webkit-any-link{
 .card2{
   min-width: 150px;
   height: 70%;
-  background-image: url('Horizon.jpg');
+  background-image: url('../imagenes/Horizon.jpg');
   background-size: cover;
   background-position-x: 50%;
   color: #333;
@@ -202,7 +202,7 @@ a:-webkit-any-link{
 .card3{
   min-width: 150px;
   height: 70%;
-  background-image: url('Zelda.jpg');
+  background-image: url('../imagenes/Zelda.jpg');
   background-size: cover;
   background-position-x: 50%;
   color: #333;
@@ -217,7 +217,7 @@ a:-webkit-any-link{
 .card4{
   min-width: 150px;
   height: 70%;
-  background-image: url('ghost.jpg');
+  background-image: url('../imagenes/ghost.jpg');
   background-size: cover;
   background-position-x: 50%;
   color: #333;
@@ -232,7 +232,7 @@ a:-webkit-any-link{
 .card5{
   min-width: 150px;
   height: 70%;
-  background-image: url('death_s.jpg');
+  background-image: url('../imagenes/death_s.jpg');
   background-size: cover;
   background-position-x: 50%;
   color: #333;
@@ -247,7 +247,7 @@ a:-webkit-any-link{
 .card6{
   min-width: 150px;
   height: 70%;
-  background-image: url('god_of_war.jpg');
+  background-image: url('../imagenes/god_of_war.jpg');
   background-size: cover;
   background-position-x: 50%;
   color: #333;
@@ -262,7 +262,7 @@ a:-webkit-any-link{
 .card7{
   min-width: 150px;
   height: 70%;
-  background-image: url('eldeen.png');
+  background-image: url('../imagenes/eldeen.png');
   background-size: cover;
   background-position-x: 50%;
   color: #333;

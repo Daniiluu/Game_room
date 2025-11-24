@@ -4,7 +4,7 @@
     font-family: poppins;
 }
 body{
-    background-image: url("ghost_of_tsu.jpeg");
+    background-image: url("../imagenes/ghost_of_tsu.jpeg");
     background-size: cover;
     background-repeat: no-repeat
 }
