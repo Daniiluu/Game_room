@@ -1,0 +1,292 @@
+*{
+  text-decoration: none;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: poppins;
+  background-color: #212529;
+}
+
+/* Contenedor principal */
+.container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 60% 40%; /* Ajustar altura para el recuadro inferior */
+  gap: 10px;
+  height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Estilos de los recuadros */
+.left-box {
+  grid-row: 1 / 3;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 30px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
+}
+.left-box p a{
+  text-decoration: underline;
+}
+.left-box:-webkit-scrollbar {
+  height: 8px;
+  margin-top: -10px;
+}
+.left-box::-webkit-scrollbar-thumb {
+  background-color: #dee2e6;
+  border-radius: 4px;
+}
+.left-box h2 {
+  /* text-align: center;  Centra el texto del h2 */
+  /* align-self: center; Centra el h2 horizontalmente dentro del contenedor */
+  margin-bottom: 10px; /* Espaciado inferior */
+  font-size: 30px;
+  margin-top: 10px;
+}
+.left-box h3 {
+  margin-bottom: 0px; /* Espaciado inferior */
+  font-size: 40px;
+  margin-top: 0px;
+}
+.left-box p{
+line-height: 21px;
+}
+.left-box ul {
+  padding-left: 10px;
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+.left-box ul li {
+  position: relative;
+  color: #fce4ec;
+  list-style: none;
+  margin: 4px 0;
+  border-left: 2px solid #f50057;
+  transition: 0.5s;
+  cursor: pointer;
+  overflow: hidden; /* Asegura que el pseudo-elemento no se desborde */
+}
+.left-box ul li:hover {
+  left: 10px;
+}
+.left-box ul li span {
+  position: relative;
+  padding: 8px;
+  padding-left: 12px;
+  display: inline-block; /* Asegura que el pseudo-elemento se ajuste al tamaño del contenido */
+  z-index: 1; /* Asegura que el texto esté sobre el pseudo-elemento */
+  transition: color 0.5s;
+}
+.left-box ul li:hover span {
+  color: #111; /* Cambia el color del texto en hover */
+}
+.left-box ul li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #f50057; /* El rectángulo rojo */
+  transform: scaleX(0); /* Inicialmente colapsado */
+  transform-origin: left;
+  transition: transform 0.5s ease-out;
+  z-index: 0; /* Asegura que esté detrás del texto */
+  width: calc(100% - 20px); /* Ajusta el ancho del rectángulo */
+}
+.left-box ul li:hover:before {
+  transform: scaleX(1); /* Expande el rectángulo */
+}
+
+.right-top-box {
+  background-image: url('TLOF2_op2.webp');
+  background-size: cover;
+  background-position-x: -10px;
+  background-position-y: -10px;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 30px 30px 30px 0px;
+  overflow: hidden;
+  transition: transform 0.2s ease-out; /* Transición suave para el efecto */
+  position: relative;
+  transform-style: preserve-3d; /* Activar el modo 3D */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 35px;
+  letter-spacing:2px;
+  text-decoration: none;
+  width: 97%;
+  height: 90%;
+}
+a:-webkit-any-link{
+  text-decoration: none;
+}
+.right-top-box img{
+  width: 370px;
+  float: right;
+  margin-top: 120px;
+  margin-right: 40px;
+}
+
+.right-bottom-box {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  margin: 0px 30px 30px 0px;
+  overflow: hidden; /* Para evitar que los elementos salgan del contenedor */
+}
+
+/* Estilos para el contenedor de las cards */
+.card-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* Scroll horizontal */
+  padding: 10px 0;
+  height: 100%;
+
+}
+
+.card-container::-webkit-scrollbar {
+  height: 8px;
+  margin-top: -10px;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background-color: #dee2e6;
+  border-radius: 4px;
+}
+
+/* Estilos de las cards */
+
+.card1{
+  min-width: 150px;
+  height: 70%;
+  background-image: url('RDR2.webp');
+  background-size: cover;
+  background-position-x: 50%;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card2{
+  min-width: 150px;
+  height: 70%;
+  background-image: url('Horizon.jpg');
+  background-size: cover;
+  background-position-x: 50%;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card3{
+  min-width: 150px;
+  height: 70%;
+  background-image: url('Zelda.jpg');
+  background-size: cover;
+  background-position-x: 50%;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card4{
+  min-width: 150px;
+  height: 70%;
+  background-image: url('ghost.jpg');
+  background-size: cover;
+  background-position-x: 50%;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card5{
+  min-width: 150px;
+  height: 70%;
+  background-image: url('death_s.jpg');
+  background-size: cover;
+  background-position-x: 50%;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card6{
+  min-width: 150px;
+  height: 70%;
+  background-image: url('god_of_war.jpg');
+  background-size: cover;
+  background-position-x: 50%;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.card7{
+  min-width: 150px;
+  height: 70%;
+  background-image: url('eldeen.png');
+  background-size: cover;
+  background-position-x: 50%;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+/* Diseño responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+  }
+  .left-box {
+      grid-row: 1;
+  }
+  .right-top-box {
+      grid-row: 2;
+  }
+  .right-bottom-box {
+      grid-row: 3;
+  }
+}
